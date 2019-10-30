@@ -1,9 +1,13 @@
 # tcp-client-server
 
-A simple TCP client and server in Fortran, used to teach interoperability with C.
+A minimal TCP client and server in Fortran, used to teach interoperability with C.
 Companion code for Chapter 11 of [Modern Fortran: Building Efficient Parallel Applications](https://www.manning.com/books/modern-fortran?a_aid=modernfortran&a_bid=2dc4d442).
 
+It uses [libdill](http://libdill.org) as a sockets library.
+
 ## Getting started
+
+Download and build the code:
 
 ```
 git clone https://github.com/modern-fortran/tcp-client-server
