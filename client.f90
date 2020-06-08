@@ -6,7 +6,6 @@ program client
                       suffix_attach
 
   implicit none
-  integer :: i
   integer(c_int) :: rc, connection
   integer(c_size_t) :: message_size, msglen = 64
   type(ipaddr) :: addr
