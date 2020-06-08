@@ -16,8 +16,10 @@ client: client.f90 $(OBJS)
 server: server.f90 $(OBJS)
 	$(FC) $< -o $@ libdill.a -pthread
 
-libdill.a:
+libdill-2.14:
 	curl http://libdill.org/libdill-2.14.tar.gz | tar xz
+
+libdill.a: libdill-2.14
 	cd libdill-2.14 && ./configure && make && cp .libs/libdill.a ..
 
 .f90.o:
