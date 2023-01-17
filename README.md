@@ -5,6 +5,11 @@ Companion code for Chapter 11 of [Modern Fortran: Building Efficient Parallel Ap
 
 It uses [libdill](http://libdill.org) as a sockets library.
 
+Please note that the install instructions from the book (downloading
+libdill-2.14) do not work with gfortran v9.x or later.
+The download and install procedure for libdill has been updated in this repo
+to allow building with the latest versions of gfortran.
+
 ## Getting started
 
 Download and build the code:
