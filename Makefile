@@ -17,11 +17,11 @@ client: client.f90 $(OBJS)
 server: server.f90 $(OBJS)
 	$(FC) $(FCFLAGS) $< -o $@ libdill.a -pthread
 
-libdill-2.14:
-	curl http://libdill.org/libdill-2.14.tar.gz | tar xz
+libdill:
+	git clone https://github.com/sustrik/libdill
 
-libdill.a: libdill-2.14
-	cd libdill-2.14 && ./configure && make && cp .libs/libdill.a ..
+libdill.a: libdill
+	cd libdill && ./autogen.sh && ./configure && $(MAKE) && cp .libs/libdill.a ..
 
 .f90.o:
 	$(FC) $(FCFLAGS) -c $<
