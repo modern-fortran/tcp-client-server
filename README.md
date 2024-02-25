@@ -3,7 +3,15 @@
 A minimal TCP client and server in Fortran, used to teach interoperability with C.
 Companion code for Chapter 11 of [Modern Fortran: Building Efficient Parallel Applications](https://www.manning.com/books/modern-fortran?a_aid=modernfortran&a_bid=2dc4d442).
 
-It uses [libdill](http://libdill.org) as a sockets library.
+It uses [libdill](https://github.com/sustrik/libdill) as a sockets library.
+
+The documentation for libdill is located on GitHub Pages [here](https://sustrik.github.io/libdill/index.html).
+
+If you are using macOS, you can avoid building the library from source and simply install the Homebrew formula:
+
+```
+brew install libdill
+```
 
 Please note that the install instructions from the book (downloading
 libdill-2.14) do not work with gfortran v9.x or later.
